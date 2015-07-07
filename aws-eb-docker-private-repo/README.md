@@ -19,7 +19,7 @@
 
 ### Private Docker Hub Credetails Setting
 
-0. Here is the link which I used for the private docker hub credetails setting
+0. Here is the link which I used for the private docker hub credetails setting https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be
 
 In this Setup I have use Dockerrun.aws.json, my private repo with image on the Docker hub
 
