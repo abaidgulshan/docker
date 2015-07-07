@@ -1,0 +1,17 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "abaid/ubuntu-withapache:1.0",
+    "Update": "true"
+  },
+  "Authentication": {
+      "Bucket": "docker",
+      "Key": "docker.io/dockercfg"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "80"
+    }
+  ],
+  "Logging": "/var/log/"
+}
