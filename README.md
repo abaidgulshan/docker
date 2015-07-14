@@ -29,6 +29,25 @@ Docker is client server application
 * `gem install json` --- Inside the training/sinatra run this command
 * `docker ps`--- check the container ID which is running
 * `docker commit -m="Add the test gem" -a="Abaid" 60fdf3918c49 abaid/sinatra:v1.1` Open another terminal and commit the change
+
 ### Build Image from dockerfile
-* 
+* `mkdir -p docker-files/build` --- Create a folder 
+* `cd docker-files/build` --- Change the directory 
+* `touch Dockerfile` --- Create the Dockerfile
+* `vim Dockerfile` --- open the Dockerfile all following lines
+  *   `FROM ubuntu:14.04`
+  *   `MAINTAINER Abaid Gulshan <abaid.gulshan@gmail.com>`
+  *   `RUN apt-get -y update`
+* `docker build -t="ubuntu:14.04:withupdate" . `--- it will build the image with the Dockerfile 
+* `docker images` --- check your build image
+
+### Docker Run with command 
+* `docker run -d ubuntu:latest /bin/bash -c "while true; do echo DOCKERMAN;  sleep 1; done" ` --- This command will run with disconnected mode and a running loop as well
+* `docker ps ` --- This will check the running container we need the name of container 
+* `docker logs compassionate_blackwell `--- This will show the running container output which will be show us DOCKERMAN in every second
+* `docker logs compassionate_blackwell | wc -l `--- This command will show the how many time loop which run
+* `docker stop compassionate_blackwell `--- This will stop the container
+
+
+
 
