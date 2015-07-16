@@ -48,6 +48,17 @@ Docker is client server application
 * `docker logs compassionate_blackwell | wc -l `--- This command will show the how many time loop which run
 * `docker stop compassionate_blackwell `--- This will stop the container
 
-
+### Add External file in the Dockerfile
+* `docker images` --- check current images
+* `cd docker-files/build` --- Change the directory
+* `test.html` --- create a script file
+* `vim Dockerfile` --- open the Dockerfile all following lines
+  * `FROM ubuntu:apacherunning`
+  * `MAINTAINER abaid778 <abaid.gulshan@gmail.com>`
+  * `EXPOSE 80`
+  * `ADD test.html /var/www/html/test.html`
+* `docker build -t test:html . ` --- Now build the docker image with changed Dockerfile
+* `docker run -i -t test:html /bin/bash` --- Run and check the file inside the /var/www/html/
+  
 
 
