@@ -1,0 +1,22 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "interact/vault:1.0",
+    "Update": "true"
+  },
+  "Authentication": {
+      "Bucket": "docker-fm-staging",
+      "Key": "docker.io/dockercfg"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "8080"
+    }
+  ],
+	"containerDefinitions": [
+    {
+	"memory": "1792"
+	}
+],
+  "Logging": "/var/log/"
+}
