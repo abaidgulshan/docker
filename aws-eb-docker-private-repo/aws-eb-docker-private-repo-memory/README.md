@@ -1,7 +1,7 @@
 # Docker
 
 
-##AWS Elastic Beanstalk with docker private Repo
+##AWS Elastic Beanstalk with docker private Repo with Memory define container
 ###Initial AWS EBS command line tool Configuration
 
 0. Download the AWS EBS command line tool https://aws.amazon.com/code/6752709412171743
