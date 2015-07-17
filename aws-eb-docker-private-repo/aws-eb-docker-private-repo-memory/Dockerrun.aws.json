@@ -1,16 +1,16 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "interact/vault:1.0",
+    "Name": "abaid779/test:1.0",
     "Update": "true"
   },
   "Authentication": {
-      "Bucket": "docker-fm-staging",
+      "Bucket": "test",
       "Key": "docker.io/dockercfg"
   },
   "Ports": [
     {
-      "ContainerPort": "8080"
+      "ContainerPort": "80"
     }
   ],
 	"containerDefinitions": [
