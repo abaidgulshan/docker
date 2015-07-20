@@ -60,5 +60,18 @@ Docker is client server application
 * `docker build -t test:html . ` --- Now build the docker image with changed Dockerfile
 * `docker run -i -t test:html /bin/bash` --- Run and check the file inside the /var/www/html/
   
+### Mount the Volume in the Docker container 
+* `mkdir -p /root/test` --- Create foler in the local system
+* `docker run -t -i -d -v /root/test:/var/app ubuntu:12.04` --- Command will mount the local folder to the container 
 
+### Networking on Docker 
+
+* `service docker.io stop` --- First stop the Docker service
+* `ip link add br10 type bridge` --- Create a bridge on your local system
+* `ip addr add 10.10.100.1/24 dev br10` --- add IP addresses range to that bridge
+* `ip link set br10 up` --- Up the link of the Bridge
+* `ifconfig` --- check the bridge is up and running
+* `docker.io -d -b br10 &` --- now run the docker attached bridge in background 
+* `docker run -t -i -d ubuntu:latest /bin/bash` --- open the different terminal and run the docker containers
+* `ifconfig` --- Inside the container check the IP
 
