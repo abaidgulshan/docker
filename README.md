@@ -75,3 +75,6 @@ Docker is client server application
 * `docker run -t -i -d ubuntu:latest /bin/bash` --- open the different terminal and run the docker containers
 * `ifconfig` --- Inside the container check the IP
 
+### Docker Exec
+
+* `docker exec -it Container_ID /bin/bash` --- Running container attached command 
