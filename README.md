@@ -93,4 +93,11 @@ Docker is client server application
 * `docker attach data1` --- login to the container 
 * `docker attach data2` --- login to the container and create a file in /data folder it will come to the both container
 
+### Committing a Running Container
+
+* `docker run -i -t ubuntu:12.04 /bin/bash` --- run a docker container 
+* `apt-get install htop` --- install the htop on in the container
+* `docker ps ` --- run this on the another container and check the name of the container 
+* `docker commit boring_ardinghelli ubuntu:htop` --- commit the change in the running container 
+
 
