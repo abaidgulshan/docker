@@ -100,4 +100,19 @@ Docker is client server application
 * `docker ps ` --- run this on the another container and check the name of the container 
 * `docker commit boring_ardinghelli ubuntu:htop` --- commit the change in the running container 
 
+### Container Linking and Communication
 
+* `docker run -t -i -d -name webserver1 ubuntu:apacherunning /bin/bash` start the apache installed container
+* `docker run -i -t --name mytest --link webserver1:localweb ubuntu:12.04 /bin/bash` Start the second container with linking commnad
+
+### Useful Docker CLI Commands
+#### Docker CP
+* `docker run  -i -t ubuntu:12.04 /bin/bash` --- run a docker container 
+* `touch /tmp/test` --- create a file inside the docker container 
+* `docker ps` --- open another terminal and run this command to check the container name
+* `docker cp sleepy_goodall:/tmp/test.txt /tmp` --- it will copy the file from container to local file system
+
+#### Docker Diff 
+
+* `docker diff myweb3` --- it will check the change of the that container
+* 
