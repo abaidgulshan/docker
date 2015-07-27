@@ -78,3 +78,19 @@ Docker is client server application
 ### Docker Exec
 
 * `docker exec -it Container_ID /bin/bash` --- Running container attached command 
+
+### Docker Internal
+
+* `docker run -i -t -d --name mycontainer test:html` --- this command will run Docker container with name
+* `docker exec -i -t mycontainer /usr/bin/top` --- it will run the command without login 
+* `docker ps -a` --- this command will show the stop container list
+* `docker start CONTAINERNAME` --- this command start the stop container
+
+### Sharing Container Resources
+
+* `docker -d -i -t -v /data --name data1 ubuntu:12.04` ---  run a docker container with the mount volume with name /data
+* `docker run -d -i -t  --volumes-from data1 --name data2 ubuntu:12.04` --- run second container with the name data 2
+* `docker attach data1` --- login to the container 
+* `docker attach data2` --- login to the container and create a file in /data folder it will come to the both container
+
+
