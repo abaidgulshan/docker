@@ -111,8 +111,12 @@ Docker is client server application
 * `touch /tmp/test` --- create a file inside the docker container 
 * `docker ps` --- open another terminal and run this command to check the container name
 * `docker cp sleepy_goodall:/tmp/test.txt /tmp` --- it will copy the file from container to local file system
-
-#### Docker Diff 
-
 * `docker diff myweb3` --- it will check the change of the that container
+* `docker events` --- It will check the events on the run time of docker
+* `docker history ubuntu:12.04` --- it will show all changes of the to that docker image
+* `docker exec -i -t myTest /usr/bin/apt-get -y update` it will run the command on this container without login
+* `docker run -i -t -d --name myweb1 ubuntu:12.04 /bin/bash` --- run the docker image
+* `docker run -i -t -d --name myweb2 ubuntu:12.04 /bin/bash` --- run the docker image
+* `docker run -i -t -d --name myweb3 ubuntu:12.04 /bin/bash` --- run the docker image
+* `docker info` --- it will show the all the info like disk utilization by the docker
 * 
