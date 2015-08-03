@@ -1,11 +1,11 @@
 # docker
 My learning to DOCKER
 
-Docker is client server application 
+Docker is client server application . I called it a linux emulator. Docker is all about making it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs
 
-0. Daemon
-0. Client
-0. Docker.io
+0. Daemon (Running on the server)
+0. Client ( commands interection with deamon)
+0. Docker.io (Docker Images repos)
 
 ## Start with commands
 
@@ -15,7 +15,7 @@ Docker is client server application
 
 ### Download the Docker Image 
 
-*  `docker pull ubuntu:12.04` --- Pull my first image from docker registory 
+* `docker pull ubuntu:12.04` --- Pull my first image from docker registory 
 * `docker images` --- it will show the download images or install images 
 * `docker inspect ubuntu:14.04` --- It will show all the details of the image
 
@@ -119,4 +119,5 @@ Docker is client server application
 * `docker run -i -t -d --name myweb2 ubuntu:12.04 /bin/bash` --- run the docker image
 * `docker run -i -t -d --name myweb3 ubuntu:12.04 /bin/bash` --- run the docker image
 * `docker info` --- it will show the all the info like disk utilization by the docker
-* 
+* `docker top myweb1` --- it will show the process in the container
+* `docker kill myweb2` --- if we need to stop the in container immediately we will use docker fill because docker stops takes time to stop container
