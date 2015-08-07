@@ -121,3 +121,9 @@ Docker is client server application . I called it a linux emulator. Docker is al
 * `docker info` --- it will show the all the info like disk utilization by the docker
 * `docker top myweb1` --- it will show the process in the container
 * `docker kill myweb2` --- if we need to stop the in container immediately we will use docker fill because docker stops takes time to stop container
+*
+
+## Docker IP get command
+
+* `docker inspect ContainerName | grep IPAddress` --- you get the IP of Running container
+
