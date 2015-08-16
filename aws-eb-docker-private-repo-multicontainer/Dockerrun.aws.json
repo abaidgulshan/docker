@@ -1,0 +1,40 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "authentication": {
+        "bucket": "docker-credentails",
+        "key": "docker.io/dockercfg"
+    },
+    "containerDefinitions": [
+        {
+            "name": "rabbit",
+            "image": "rabbitmq:3",
+            "essential": true,
+            "memory": 256
+        },
+        {
+            "name": "test-java",
+            "image": "abaid778/test-java:1.0",
+            "essential": true,
+            "memory": 256,
+            "links": [
+                "rabbit"
+            ]
+        },
+        {
+            "name": "test-java2",
+            "image": "abaid778/test-java-2:1.0",
+            "essential": true,
+            "memory": 256,
+            "portMappings": [
+                {
+                    "hostPort": 9090,
+                    "containerPort": 9090
+                }
+            ],
+            "links": [
+                "rabbit",
+                "test-java"
+            ]
+        }
+    ]
+}
